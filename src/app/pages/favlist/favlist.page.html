@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>favlist</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Mes favoris
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <section *ngIf="!loading; else loader">
+    <div *ngIf="oeuvres; else error">
+      <ion-card *ngFor="let oeuvre of oeuvres" [routerLink]="['/details', oeuvre.id]">
+        <div *ngIf="oeuvre.liked">
+          <img [src]="oeuvre.image" [alt]="oeuvre.name" />
+        </div>
+      </ion-card>
+    </div>
 
+    <ng-template #error>
+      <app-error></app-error>
+    </ng-template>
+  </section>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
 </ion-content>

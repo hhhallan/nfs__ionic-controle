@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {OeuvreService} from "../../services/oeuvre/oeuvre.service";
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  oeuvres: Array<any>;
+  loading = true;
 
-  constructor() {}
+  constructor(private oeuvreService: OeuvreService) {
+    this.load();
+  }
+
+  load() {
+    this.oeuvreService.getAll().subscribe(data => {
+      this.oeuvres = data;
+      this.loading = false;
+    }, () => {
+      this.loading = false;
+    })
+  }
 
 }

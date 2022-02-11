@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Détail
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+  <article *ngIf="!loading; else loader">
+    <div *ngIf="oeuvre; else error">
+      <img [src]="oeuvre.image" [alt]="oeuvre.name">
+      <h1>{{oeuvre.name}}</h1>
+      <p>{{oeuvre.author}}</p>
+
+      <p>L'oeuvre <span>{{oeuvre.name}}</span> de {{oeuvre.author}} est située à/au {{oeuvre.localisation}}</p>
+
+      <p class="publish">Oeuvre publié le: {{oeuvre.created_at}}</p>
+      <ion-button (click)="favorite()" routerLink="/">Ajouter à mes favoris</ion-button>
+    </div>
+
+    <ng-template #error>
+      <app-error></app-error>
+    </ng-template>
+  </article>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
 </ion-content>

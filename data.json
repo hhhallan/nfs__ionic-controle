@@ -3,10 +3,11 @@
     {
       "id": 1,
       "name": "Chuuuuut !!!",
-      "image": "https://cdn.carredartistes.com/fr-fr/content_images/street%20art%20header.png",
+      "image": "https://www.carredartistes.com/fr-fr/content_images/Sans%20titre%20(5).png",
       "localisation": "Centre Pompidou",
       "author": "Jef Aerosol",
-      "created_at": "la"
+      "created_at": "11/02/2022",
+      "liked": false
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "image": "https://www.carredartistes.com/fr-fr/content_images/Sans%20titre%20(6)1.png",
       "localisation": "Orléans",
       "author": "Thoma Vuille",
-      "created_at": "la"
+      "created_at": "11/02/2022",
+      "liked": true
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "image": "https://www.carredartistes.com/fr-fr/content_images/Sans%20titre%20(7).png",
       "localisation": "Paris",
       "author": "Banksy",
-      "created_at": "la"
+      "created_at": "11/02/2022",
+      "liked": false
     }
   ]
 }

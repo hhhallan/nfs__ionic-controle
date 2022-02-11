@@ -1,0 +1,16 @@
+div {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+  }
+
+  p.publish {
+    opacity: 0.6;
+    font-size: 12px;
+  }
+}
