@@ -1,0 +1,28 @@
+{
+  "oeuvre": [
+    {
+      "id": 1,
+      "name": "Chuuuuut !!!",
+      "image": "https://cdn.carredartistes.com/fr-fr/content_images/street%20art%20header.png",
+      "localisation": "Centre Pompidou",
+      "author": "Jef Aerosol",
+      "created_at": "la"
+    },
+    {
+      "id": 2,
+      "name": "M. Chat",
+      "image": "https://www.carredartistes.com/fr-fr/content_images/Sans%20titre%20(6)1.png",
+      "localisation": "Orléans",
+      "author": "Thoma Vuille",
+      "created_at": "la"
+    },
+    {
+      "id": 3,
+      "name": "La Petite Fille au Ballon",
+      "image": "https://www.carredartistes.com/fr-fr/content_images/Sans%20titre%20(7).png",
+      "localisation": "Paris",
+      "author": "Banksy",
+      "created_at": "la"
+    }
+  ]
+}
